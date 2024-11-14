@@ -104,7 +104,7 @@ public class NextDate {
 
 	}
 	
-	
+
 	/*********************************************
 	 * Method: isThirtyOneDayMonth
 	 * @param month
