@@ -15,7 +15,6 @@ public class NextDate {
 		//year = y;
 	}
 	
-	
 	/*********************************************************
 	**Method: run
 	**Returns: string

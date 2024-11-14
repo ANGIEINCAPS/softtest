@@ -1,8 +1,9 @@
-
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestNextDate {
+	
+	//
 
     @Test
     public void TestInvalidInputDayZero() {
@@ -88,11 +89,7 @@ public class TestNextDate {
         assertEquals(nextDate.run(2, 27, 2020), "2/28/2020");
     }
 
-    @Test
-    public void TestFebruaryIncrementDayLeapYear() {
-        NextDate nextDate = new NextDate(2, 28, 2020);
-        assertEquals(nextDate.run(2, 28, 2020), "2/29/2020");
-    }
+
 
 
     @Test
@@ -118,7 +115,19 @@ public class TestNextDate {
         NextDate nextDate = new NextDate(2, 29, 2000);
         assertEquals(nextDate.run(2, 29, 2000), "3/1/2000");
     }
-
+    
+    @Test
+    public void TestFebruaryLeapYearDayTwentyEight() {
+        NextDate nextDate = new NextDate(2, 28, 2020);
+        assertEquals(nextDate.run(2, 28, 2020), "2/29/2020");
+    }
+//added after
+    @Test
+    public void TestFebruaryLeapYearDayTwentyNine() {
+        NextDate nextDate = new NextDate(2, 29, 2017);
+        assertEquals(nextDate.run(2, 29, 2017), "3/1/2017");
+    }
+   
 
     }
 
